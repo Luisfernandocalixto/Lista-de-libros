@@ -8,8 +8,8 @@
     <meta property="og:title" content="Listado de libros">
     <meta property="og:url" content="https://listado-libros.netlify.app">
     <meta property="og:image" content="./images/profile.webp">
-    <meta property="og:description" content="Encuentra el libro de tu agrado en la colleción de libros gratuitos">  
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+    <meta property="og:description" content="Encuentra el libro de tu agrado en la colleción de libros gratuitos">
+    <link rel="stylesheet" href="/css/pico.min.css" />
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/loading.css">
     <link rel="shortcut icon" href="/images/book.svg" type="image/x-icon">
@@ -24,10 +24,11 @@
 
         <div class="text-header">
             <h1>BookHaven</h1>
-            <h2>Colleciones</h2>
+            <h2>Colecciones</h2>
         </div>
 
-        <div class="wave" style="height:150px; overflow:hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+        <div class="wave" >
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none"
                 style="height: 100%; width: 100%;">
                 <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
                     style="stroke: none; fill: #fff;"></path>
@@ -48,14 +49,16 @@
 
     <br><br>
 
-    <section style="margin: 20px;">
+    <section  class="mg">
         <div id="containerFirst">
         </div>
     </section>
 
     <footer></footer>
 
-    <script src="app.js"></script>
+    <!-- script -->
+    <script src="/js/app.js" type="module"></script>
+    <!-- script -->
 </body>
 
 </html>
