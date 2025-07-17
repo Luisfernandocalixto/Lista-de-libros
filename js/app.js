@@ -1,32 +1,33 @@
+import { URL_DATA } from "./provide.js";
 import { aviseInput, aviseNotFound, container, renderBooks } from "./template.js";
-
 document.addEventListener('DOMContentLoaded', function () {
 
     // add function of searchBook
-    document.getElementById('btnSearch').addEventListener("click", searchBook);
-
-    // URL of books
-    const URL_DATA = 'https://gutendex.com/books';
-
-
-
+    const button = document.getElementById('btnSearch')
+    button.addEventListener("click", searchBook);
+    
     // element for show results
     let containerFirst = document.querySelector('#containerFirst');
-
+    
     function searchBook() {
-
+        
         containerFirst.innerHTML = container;
-
+        
         let inputSearch = document.querySelector('.inputSearch').value;
-
+        
         if (inputSearch === '' || inputSearch.trim() === '') {
             containerFirst.innerHTML = aviseInput;
             return
         }
-
+        
+        button.setAttribute('disabled', true)
         fetch(`${URL_DATA}?search=${inputSearch}`)
-            .then(response => response.json())
-            .then(response => contentBook(response.results))
+        .then(response => response.json())
+        .then(response => contentBook(response.results))
+        .finally(() => {
+            button.removeAttribute('disabled')
+        })
+
 
     }
 

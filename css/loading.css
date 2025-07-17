@@ -1,6 +1,6 @@
   .container {
     --uib-size: 40px;
-    --uib-color: black;
+    --uib-color: #02659a;
     --uib-speed: .9s;
     --uib-center: calc(var(--uib-size) / 2 - var(--uib-size) / 5 / 2);
     position: relative;
