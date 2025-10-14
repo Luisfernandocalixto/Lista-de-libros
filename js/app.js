@@ -3,7 +3,7 @@ import { aviseInput, aviseNotFound, container, renderBooks } from "./template.js
 document.addEventListener('DOMContentLoaded', function () {
 
     // add function of searchBook
-    const button = document.getElementById('btnSearch')
+    const button = document.getElementById('btnSearch');
     button.addEventListener("click", searchBook);
     
     // element for show results
@@ -17,15 +17,15 @@ document.addEventListener('DOMContentLoaded', function () {
         
         if (inputSearch === '' || inputSearch.trim() === '') {
             containerFirst.innerHTML = aviseInput;
-            return
+            return;
         }
         
-        button.setAttribute('disabled', true)
+        button.setAttribute('disabled', true);
         fetch(`${URL_DATA}?search=${inputSearch}`)
         .then(response => response.json())
         .then(response => contentBook(response.results))
         .finally(() => {
-            button.removeAttribute('disabled')
+            button.removeAttribute('disabled');
         })
 
 
