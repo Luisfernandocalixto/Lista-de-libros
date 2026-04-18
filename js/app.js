@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(response => contentBook(response.results))
         .finally(() => {
             button.removeAttribute('disabled');
-        })
+        });
 
 
     }
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             containerFirst.appendChild(containerData);
 
-        })
+        });
 
 
 
